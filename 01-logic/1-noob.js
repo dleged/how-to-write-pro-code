@@ -1,9 +1,13 @@
 function toAccounting(n){
-  if(n < 0){
-    return `(${Math.abs(n)})`
-  }else{
-    return n;
+  if(n == null){
+    return;
   }
+
+  if(n < 0){
+    return `(${Math.abs(n)})`;
+  }
+
+  return n.toString();
 }
 
 console.log(toAccounting(undefined));
