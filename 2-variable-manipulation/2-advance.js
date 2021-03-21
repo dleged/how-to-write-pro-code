@@ -1,14 +1,19 @@
+const TAX_RATE = 1.5;
+const SHIPPING_DEFAULT = 5;
+
 function calculateTotal(items,options){
   let total = 0;
 
-  for(let t of items) {
-    total += t.price * t.quan;
-  }
+  if(!items.length) return total;
+  
+  total = items.reduce((t,{price,quan}) => t + price * quan,0);
 
   total = total - total * (options.discount || 0)
-  total = total * 1.5;
-  total = total + (options.shipping || 5);
-
+  total = total * TAX_RATE;
+  if(options.shipping !== 0){
+    total = total + (options.shipping || SHIPPING_DEFAULT);
+  }
+  
   return total;
   
 }
