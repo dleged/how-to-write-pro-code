@@ -20,9 +20,6 @@ const testItems = [
   { price: 2, quan: 3 }
 ]
 
-// console.log(calculateTotal())
-// console.log(calculateTotal(testItems))
-// console.log(calculateTotal(undefined, {}))
 console.log(calculateTotal([], {}))
 console.log(calculateTotal(testItems, {}))
 console.log(calculateTotal(testItems, { shipping: 0 }))

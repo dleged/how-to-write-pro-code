@@ -37,12 +37,12 @@ var p = performance;
 
 var c = 33;
 
-for (var i = 0; i < 10; i++) {
-  fib1(c);
-  fib1(c);
-  fib2(c);
-  fib2(c);
-}
+// for (var i = 0; i < 10; i++) {
+//   fib1(c);
+//   fib1(c);
+//   fib2(c);
+//   fib2(c);
+// }
 
 fib1(c);
 console.log('result stack', fib1(c));
